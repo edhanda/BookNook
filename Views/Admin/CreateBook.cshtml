@@ -1,0 +1,64 @@
+﻿@model BookStoreApp.Models.Book
+
+@{
+    ViewData["Title"] = "Add New Book";
+    var genres = ViewBag.Genres as List<string>;
+}
+
+<div class="form-container">
+    <h2 class="page-title">Add New Book</h2>
+    <form asp-action="CreateBook" method="post" class="styled-form">
+        <div class="form-group">
+            <label for="Title">Title</label>
+            <input asp-for="Title" class="form-control" placeholder="Enter the book title" required />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Author">Author</label>
+            <input asp-for="Author" class="form-control" placeholder="Enter the author's name" required />
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Price">Price</label>
+            <input asp-for="Price" class="form-control" type="number" step="0.01" placeholder="Enter the price" required />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="CoverImageUrl">Cover Image URL</label>
+            <input asp-for="CoverImageUrl" class="form-control" placeholder="Enter the cover image URL" required />
+            <span asp-validation-for="CoverImageUrl" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Genre">Category</label>
+            <select asp-for="Genre" class="form-control" required>
+                <option value="">Select a category</option>
+                @if (genres != null)
+                {
+                    foreach (var genre in genres)
+                    {
+                        <option value="@genre">@genre</option>
+                    }
+                }
+            </select>
+            <span asp-validation-for="Genre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <textarea asp-for="Description" class="form-control" placeholder="Enter a brief description" required></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="button primary">Add Book</button><br><br>
+        <a asp-action="ManageBooks" class="button secondary">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}

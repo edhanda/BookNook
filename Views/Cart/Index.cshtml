@@ -1,0 +1,74 @@
+@model List<BookStoreApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Your Cart";
+    decimal total = Model.Sum(b => b.Price);
+}
+
+@using BookStoreApp.Models
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+@{
+    // Generate and store the anti-forgery tokens
+    var tokens = Antiforgery.GetAndStoreTokens(Context);
+}
+<div class="cart-container">
+    <h2>Your Cart</h2>
+
+    @if (Model.Any())
+    {
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>$@book.Price</td>
+                        <td>
+                            <a href="@Url.Action("RemoveFromCart", "Cart", new { id = book.Id })" class="remove-btn">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="cart-total">
+            <h3>Total: $@total</h3>
+            <button id="checkout-button">Pay Now</button>
+        </div>
+    }
+    else
+    {
+        <p>Your cart is empty.</p>
+    }
+</div>
+
+@section Scripts {
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        var stripe = Stripe('@Configuration["Stripe:PublishableKey"]');
+        var checkoutButton = document.getElementById('checkout-button');
+        checkoutButton.addEventListener('click', function () {
+            fetch('/Payment/CreateCheckoutSession', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': '@Antiforgery.GetAndStoreTokens(Context).RequestToken'
+                }
+            })
+            .then(function (response) { return response.json(); })
+            .then(function (session) { return stripe.redirectToCheckout({ sessionId: session.id }); })
+            .catch(function (error) { console.error('Error:', error); });
+        });
+    </script>
+}

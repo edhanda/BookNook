@@ -1,0 +1,117 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BookStoreApp
+build_property.RootNamespace = BookStoreApp
+build_property.ProjectDir = C:\Users\Esha\Documents\Projects\BookStoreAppm\BookStoreApp-main\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Esha\Documents\Projects\BookStoreAppm\BookStoreApp-main
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Account/MyOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeU9yZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Account/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Admin/CreateBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Admin/DeleteBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Admin/EditBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Admin/ManageBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlQm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Admin/ManageOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWFuYWdlT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Cart/OrderConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPcmRlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Categories/BooksByGenre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xCb29rc0J5R2VucmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Home/BookDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCb29rRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Payment/Cancel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxDYW5jZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Payment/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxTdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Esha/Documents/Projects/BookStoreAppm/BookStoreApp-main/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-0g1u2uspk6

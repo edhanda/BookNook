@@ -1,0 +1,17 @@
+@model List<string>
+
+@{
+    ViewData["Title"] = "Browse Books by Categories";
+}
+
+<div class="categories-container">
+    <h2>Categories</h2>
+    <ul class="categories-list">
+        @foreach (var genre in Model)
+        {
+            <li>
+                <a href="@Url.Action("BooksByGenre", "Categories", new { genre = genre })">@genre</a>
+            </li>
+        }
+    </ul>
+</div>

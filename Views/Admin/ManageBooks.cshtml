@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BookStoreApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Manage Books";
+}
+
+<div class="manage-books-container">
+    <h2>Manage Books</h2>
+    <a asp-action="CreateBook" class="button primary">Add New Book</a>
+
+    <table class="manage-books-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>$@book.Price</td>
+                        <td>@book.Genre</td>
+                        <td>
+                            <a asp-action="EditBook" asp-route-id="@book.Id" class="button small secondary">Edit</a>
+                            <a asp-action="DeleteBook" asp-route-id="@book.Id" class="button small danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="no-data">No books available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

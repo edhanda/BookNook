@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BookStoreApp.Models.Order>
+
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<div class="categories-container">
+    <h2>My Orders</h2>
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Order Number</th>
+                <th>Order Total</th>
+                <th>Date Placed</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                foreach (var order in Model)
+                {
+                    <tr>
+                        <td>@order.Id</td>
+                        <td>$@order.OrderItems.Sum(i => i.Price * i.Quantity)</td>
+                        <td>@order.OrderDate.ToShortDateString()</td>
+                        <td>@order.Status</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" class="no-data">You have not placed any orders yet.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

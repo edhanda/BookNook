@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BookStoreApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Browse Books";
+    var searchQuery = ViewData["SearchQuery"] as string;
+}
+
+<section class="book-listings">
+    <h3>Popular Books</h3>
+    <div class="book-grid">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var book in Model)
+            {
+                <div class="book-card">
+                    <img src="@book.CoverImageUrl" alt="@book.Title" />
+                    <h4>@book.Title</h4>
+                    <p>Author: @book.Author</p>
+                    <p>Price: $@book.Price</p>
+                    <div class="card-buttons">
+                        <button onclick="location.href='@Url.Action("BookDetails", "Home", new { id = book.Id })'">View Details</button>
+                        <button onclick="location.href='@Url.Action("AddToCart", "Cart", new { id = book.Id })'">Add to Cart</button>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No books found for your search query.</p>
+        }
+    </div>
+</section>

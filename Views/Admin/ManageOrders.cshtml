@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BookStoreApp.Models.Order>
+
+@{
+    ViewData["Title"] = "Manage Orders";
+}
+
+<div class="categories-container">
+    <h2>Manage Orders</h2>
+
+    <table class="cart-table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>User Email</th>
+                <th>Order Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                foreach (var order in Model)
+                {
+                    <tr>
+                        <td>@order.Id</td>
+                        <td>@order.UserEmail</td>
+                        <td>@order.OrderDate.ToShortDateString()</td>
+                        <td>@order.Status</td>
+                        <td>
+                            <a href="@Url.Action("UpdateOrderStatus", "Admin", new { id = order.Id, status = "Complete" })"
+                               class="button small secondary">Mark as Complete</a>
+                            <a href="@Url.Action("UpdateOrderStatus", "Admin", new { id = order.Id, status = "Cancelled" })"
+                               class="button small danger">Cancel</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="no-data">No orders available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

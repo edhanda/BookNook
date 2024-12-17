@@ -1,0 +1,18 @@
+﻿@model BookStoreApp.Models.Order
+
+@{
+    ViewData["Title"] = "Payment Successful";
+}
+
+<div class="order-success-container">
+    <h2>Payment Successful</h2>
+    <p>Thank you for your purchase! Your order number is <strong>@Model.Id</strong>.</p>
+
+    <p class="order-total">
+        <strong>Total:</strong> $@Model.OrderItems.Sum(i => i.Price * i.Quantity)
+    </p>
+
+    <p class="order-status">
+        <strong>Status:</strong> @Model.Status
+    </p>
+</div>

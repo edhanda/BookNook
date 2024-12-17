@@ -1,0 +1,20 @@
+﻿@model BookStoreApp.Models.Order
+
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<div class="order-confirmation-container">
+    <h2>Order Confirmation</h2>
+    <p>Thank you for your purchase! Your order number is <strong>@Model.Id</strong>.</p>
+
+    <h3>Order Details:</h3>
+    <ul>
+        @foreach (var item in Model.OrderItems)
+        {
+            <li>@item.Book.Title - $@item.Price (Quantity: @item.Quantity)</li>
+        }
+    </ul>
+
+    <p class="order-total"><strong>Total:</strong> $@Model.OrderItems.Sum(i => i.Price * i.Quantity)</p>
+</div>

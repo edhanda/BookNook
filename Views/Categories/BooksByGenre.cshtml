@@ -1,0 +1,30 @@
+@model IEnumerable<BookStoreApp.Models.Book>
+
+@{
+    ViewData["Title"] = Model.FirstOrDefault()?.Genre ?? "Books by Category";
+}
+
+<div class="category-container">
+    <div class="category-header">
+        <h2>@ViewData["Title"]</h2>
+    </div>
+    <div class="books-grid">
+        @if (Model.Any())
+        {
+            foreach (var book in Model)
+            {
+                <div class="book-card">
+                    <img src="@book.CoverImageUrl" alt="@book.Title" />
+                    <h4>@book.Title</h4>
+                    <p>@book.Author</p>
+                    <p>$@book.Price</p>
+                    <a class="button" href="@Url.Action("BookDetails", "Home", new { id = book.Id })">View Details</a>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No books available in this category.</p>
+        }
+    </div>
+</div>
