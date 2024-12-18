@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: booknook
+    env: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/BookStoreApp.dll
+    plan: free
