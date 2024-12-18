@@ -1,0 +1,936 @@
+/* Global resets and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f4f6; /* Light background */
+  color: #333;
+}
+
+/* Navbar styling with gradient background */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Changed from center to space-between */
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #612f2d, #02195a);
+  color: #fff;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center; /* Ensure button and input are vertically aligned */
+  margin-right: 20px;
+  width: 350px; /* Increase width for better balance with the placeholder text */
+}
+
+.search-bar input {
+  padding: 10px; /* Increase padding for height */
+  font-size: 1rem;
+  border: 1px solid #ddd; /* Add border for consistency */
+  border-radius: 4px 0 0 4px; /* Rounded corners */
+  flex: 1; /* Make input take up available space */
+}
+
+.search-bar button {
+  padding: 13px 20px; /* Match height with input box */
+  background-color: #f3c769; /* Matching gradient color */
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0; /* Rounded corners for button */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #e0b45b; /* Slightly darker shade on hover */
+}
+.auth-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+/* Banner Section with background gradient */
+.banner {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #bbb8bb, #151531); /* Vibrant gradient */
+  color: #fff;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Book Listings Section */
+.book-listings {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.book-listings h3 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #02195a;
+  font-weight: bold;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 books per row */
+  gap: 30px; /* Spacing between cards */
+  justify-content: center;
+}
+
+.book-card {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 150px;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.book-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #666;
+}
+
+.card-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+}
+
+.card-buttons button {
+  padding: 10px 15px;
+  border: none;
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.card-buttons button:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a); /* Reverse gradient on hover */
+}
+
+
+/* Footer styling with gradient background */
+.footer {
+  padding: 15px;
+  text-align: center;
+  background: linear-gradient(45deg, #02195a, #612f2d); /* Cool gradient */
+  color: #fff;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Book Details Styling */
+.book-details-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.book-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.book-details img {
+  width: 250px;
+  height: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #02195a;
+  font-weight: bold;
+}
+
+.book-info p {
+  margin: 5px 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.book-info button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-info button:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a); /* Reverse gradient */
+}
+
+/* Form Container Styling (for Login and Sign Up pages) */
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #02195a;
+  font-weight: bold;
+}
+
+.form-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-container button:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a); /* Reverse gradient on hover */
+}
+
+.form-footer {
+  margin-top: 15px;
+  color: #666;
+}
+
+.form-footer a {
+  color: #02195a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Cart Page Styling */
+.cart-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #02195a;
+  text-align: center;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+  background-color: #f3f4f6;
+  font-weight: bold;
+  color: #02195a;
+}
+
+.cart-table td {
+  color: #333;
+}
+
+.remove-btn {
+  padding: 5px 10px;
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.remove-btn:hover {
+  background-color: #a93226;
+}
+
+.cart-total {
+  text-align: right;
+}
+
+.cart-total h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #02195a;
+}
+
+.cart-total button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-total button:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a);
+}
+
+/* Order Confirmation Styling */
+.order-confirmation-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.order-confirmation-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #02195a;
+}
+
+.order-confirmation-container p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.order-confirmation-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.order-confirmation-container ul li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.order-total {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #02195a;
+}
+
+/* Payment Successful Page */
+.order-success-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.order-success-container h2 {
+  font-size: 2rem;
+  color: #02195a;
+  margin-bottom: 20px;
+}
+
+.order-success-container p {
+  margin: 10px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.order-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.order-details-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.order-item-title {
+  font-weight: bold;
+  color: #02195a;
+  flex: 2;
+}
+
+.order-item-price {
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+  text-align: center;
+}
+
+.order-item-quantity {
+  font-size: 0.9rem;
+  color: #666;
+  flex: 1;
+  text-align: right;
+}
+
+.no-items {
+  font-style: italic;
+  color: #888;
+  padding: 10px;
+}
+
+.order-total {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #02195a;
+  font-weight: bold;
+}
+
+/* Categories List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #02195a;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Categories Book List Styling */
+.category-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.category-header h2 {
+  font-size: 2rem;
+  color: #02195a;
+  font-weight: bold;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 120px;
+  height: 180px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.book-card h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.book-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #666;
+}
+
+.book-card .button {
+  padding: 8px 12px;
+  border: none;
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.book-card .button:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a);
+}
+
+
+/* Categories Page Styling */
+.categories-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.categories-container h2 {
+  font-size: 2rem;
+  color: #02195a;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.categories-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.categories-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #f3c769, #f7f4c4); /* Soft gradient */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.categories-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categories-list a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #02195a;
+}
+
+.categories-list a:hover {
+  text-decoration: underline;
+}
+
+/* Manage Books Page Styling */
+.manage-books-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff; /* Matches other sections */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.manage-books-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #02195a; /* Accent color */
+  font-weight: bold;
+}
+
+.manage-books-container .button.primary {
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.manage-books-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.manage-books-table th,
+.manage-books-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.manage-books-table th {
+  background-color: #f3f4f6; /* Light background for header */
+  font-weight: bold;
+  color: #02195a;
+}
+
+.manage-books-table td {
+  color: #333;
+}
+
+.manage-books-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.manage-books-table tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  padding: 15px;
+}
+
+.manage-books-container .button.primary {
+  display: inline-block;
+  margin: 0 auto 20px; /* Center alignment with bottom spacing */
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.manage-books-container .button.primary:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a); /* Reverse gradient on hover */
+}
+
+
+.button.small.secondary,
+.button.small.danger {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.button.small.secondary {
+  background: linear-gradient(45deg, #02195a, #612f2d); /* Matching gradient */
+}
+
+.button.small.secondary:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a); /* Reverse gradient on hover */
+}
+
+.button.small.danger {
+  background: linear-gradient(45deg, #612f2d, #f44336); /* Gradient for delete */
+}
+
+.button.small.danger:hover {
+  background: linear-gradient(45deg, #f44336, #d32f2f); /* Reverse gradient on hover */
+}
+
+/* Styling for form group */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left; /* Align labels to the left */
+}
+
+/* Label styling */
+.form-group label {
+  font-weight: bold;
+  color: #02195a;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input, select, and textarea styling */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #02195a; /* Highlight on focus */
+  box-shadow: 0 0 5px rgba(2, 25, 90, 0.5); /* Soft glow */
+}
+
+/* Dropdown (select) styling */
+.form-group select {
+  appearance: none; /* Remove default dropdown styling */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%2302195a" height="24" viewBox="0 0 24 24" width="24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 1em;
+}
+
+/* Textarea styling */
+.form-group textarea {
+  resize: vertical; /* Allow resizing only vertically */
+  height: 120px;
+}
+
+/* Validation error styling */
+.text-danger {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Buttons styling for Create and Cancel */
+.button.primary {
+  background: linear-gradient(45deg, #02195a, #612f2d);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.button.primary:hover {
+  background: linear-gradient(45deg, #612f2d, #02195a);
+}
+
+.button.secondary {
+  background: #ddd;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button.secondary:hover {
+  background: #ccc;
+}
+
+/* Delete Book Page Styling */
+.delete-book-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.delete-book-container .page-title {
+  font-size: 2rem;
+  color: #02195a;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.delete-book-container .confirmation-message {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.delete-book-container .book-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #333;
+}
+
+.delete-book-container .book-details li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.delete-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button.danger {
+  padding: 10px 20px;
+  background-color: #c0392b; /* Red for danger actions */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button.danger:hover {
+  background-color: #a93226; /* Slightly darker red */
+}
+
+.button.secondary {
+  padding: 10px 20px;
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button.secondary:hover {
+  background-color: #bbb;
+}
